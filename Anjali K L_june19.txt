@@ -1,0 +1,159 @@
+1.In class Multiple methods having same name and different parameters in it is called as method overloading.
+Method can be overloading in 2 ways 
+ >by changing data types
+ >by changing nuber of arguments
+ 
+
+class Adder{
+ int a,b,c;
+  
+static int add(int a,int b);{
+return a+b;
+}
+static int add(int a,int b,int c);{
+return a+b+c;
+}
+public static void main(String[] args){
+ System.out.println(Adder.add());
+}
+}
+
+
+class Adder{
+int a,b;
+static int c=5;
+ int add(int a,int b);{
+return a+b;
+}
+static int add(double a,double b);{
+return a+b+c;
+}
+public static void main(String[] args){
+ System.out.println(Adder.add());
+}
+}
+
+
+
+2.There are 4 types of variables
+
+1.static variable:declared as using static keyword
+          create only one copy and use it for instance
+          memory allocation for them is after creating the class
+
+2.instance:declared outside method inside a class
+3.local:declared within a method 
+4.parameters:declared within paranthesis
+
+ex...class Adder{
+ int a,b;
+ static int c;
+  
+static int add(int a,int b);{
+return a+b;
+}
+static int add(int a,int b,int c);{
+return a+b+c;
+}
+public static void main(String[] args){
+ System.out.println(Adder.add(10,10));
+}
+}
+
+
+
+
+3.Heap memory:this the primary memory 
+ this includes metaspace,constant pool, and instance memory
+ metaspace loads all the classes
+constant pool holds all the variables values
+instance memory allocate memory for variables
+
+Statck memory:here method loads,craete a frame and excutes method.
+
+
+4.class Mall{
+  String name;
+  String location;
+  long query;
+ 
+Mall(){
+System.out.println("no args);
+}
+
+Mall(String name,String location){
+System.out.println("Name and location");
+this.name=name;
+this.location=location;
+}
+
+Mall(String name,String location,long query){
+System.out.println("Name and location");
+this.name=name;
+this.location=location;
+this.query=query;
+}
+
+public static void main(String[] args){
+Mall mall=new Mall();
+System.out.println(mall.name);
+System.out.println(mall.location);
+System.out.println(mall.query);
+
+Mall mall1=new Mall("Lulu","RajajiNagar");
+System.out.println(mall1.name);
+System.out.println(mall1.location);
+System.out.println(mall1.query);
+
+Mall mall2=new Mall("Lulu","RajajiNagar",9606830304L);
+System.out.println(mall2.name);
+System.out.println(mall2.location);
+System.out.println(mall2.query);
+}
+
+
+7.class Mall{
+  String name;
+  String location;
+  long query;
+ 
+Mall(){
+System.out.println("no args);
+}
+
+Mall(String name,String location){
+System.out.println("Name and location");
+this.name=name;
+this.location=location;
+}
+
+Mall(String name,String location,long query){
+System.out.println("Name and location and query");
+this(name,location);
+this.query=query;
+}
+
+public static void main(String[] args){
+Mall mall=new Mall();
+System.out.println(mall.name);
+System.out.println(mall.location);
+System.out.println(mall.query);
+
+Mall mall1=new Mall("Lulu","RajajiNagar");
+System.out.println(mall1.name);
+System.out.println(mall1.location);
+System.out.println(mall1.query);
+
+Mall mall2=new Mall("Lulu","RajajiNagar",9606830304L);
+System.out.println(mall2.name);
+System.out.println(mall2.location);
+System.out.println(mall2.query);
+}
+
+   
+
+
+
+
+
+
